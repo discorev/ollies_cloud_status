@@ -53,10 +53,11 @@ export class CqmGraphComponent implements OnInit {
             const timestamp = sectionTime.toISOString().substring(0, 19) + 'Z';
 
             let record = this.graph['record'].find(record => record.timestamp === timestamp);
-            if (record) {
-                record.displayTime = graphTime;
-                this.activeRecord = record;
+            if (!record) {
+                record = new Record();
             }
+            record.displayTime = graphTime;
+            this.activeRecord = record;
         } else {
             this.activeRecord = null;
         }
