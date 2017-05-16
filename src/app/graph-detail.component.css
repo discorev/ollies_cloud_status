@@ -1,0 +1,28 @@
+.graphDetail {
+    font-size: 12px;
+    position: absolute;
+    color: #fff;
+    z-index: 11;
+    padding: 8px;
+    border-radius: 3px;
+    opacity: 0.85;
+    box-shadow: 1px 1px 3px 1px #333;
+    background-color: #000;
+    background: -moz-linear-gradient(top, #333333 0%, #000000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333333), color-stop(100%,#000000));
+    background: -webkit-linear-gradient(top, #333333 0%,#000000 100%);
+    background: -o-linear-gradient(top, #333333 0%,#000000 100%);
+    background: -ms-linear-gradient(top, #333333 0%,#000000 100%);
+    background: linear-gradient(top, #333333 0%,#000000 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#000000')";
+}
+
+.graphDetail table tr td {
+    padding: 2px;
+    text-align: right;
+}
+
+.graphDetail table tr td:last-child {
+    text-align: left;
+    font-weight: bold;
+}

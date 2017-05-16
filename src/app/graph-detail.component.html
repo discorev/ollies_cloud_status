@@ -1,0 +1,24 @@
+<div class="graphDetail" *ngIf="record" [ngStyle]="{top: event.target['offsetTop'] + event.target['height'] + 15 + 'px', left: event.pageX + 'px'}">
+    <table>
+        <tr>
+            <td>Approx time:</td>
+            <td>{{record.displayTime}}</td>
+        </tr>
+        <tr *ngIf="record['min-latency-ns']">
+            <td>Min latency:</td>
+            <td>{{(record['min-latency-ns'] / 1000000).toFixed(1)}} ms</td>
+        </tr>
+        <tr *ngIf="record['ave-latency-ns']">
+            <td>Ave latency:</td>
+            <td>{{(record['ave-latency-ns'] / 1000000).toFixed(1)}} ms</td>
+        </tr>
+        <tr *ngIf="record['max-latency-ns']">
+            <td>Max latency:</td>
+            <td>{{(record['max-latency-ns'] / 1000000).toFixed(1)}} ms</td>
+        </tr>
+        <tr *ngIf="record['lost-polls']">
+            <td>Packet loss:</td>
+            <td>{{record['lost-polls']}}%</td>
+        </tr>
+    </table>
+</div>

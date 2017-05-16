@@ -1,0 +1,4 @@
+<p *ngIf="graph">
+    <img (mousemove)="move($event)" (mouseout)="leave()" class="cqm" src="{{graph.addr}}" alt="{{graph.name}}"/>
+    <graph-detail [record]="activeRecord" [event]="event"></graph-detail>
+</p>
