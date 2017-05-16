@@ -1,0 +1,46 @@
+.wrapper {
+  background: #c9dbe9;
+  background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+  background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+  background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 46px;
+  font-weight: 600;
+}
+
+div.cqm img {
+  height: 116px;
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px 1px #888;
+  background-color: #eeeeee;
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+  background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
+  background: -webkit-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+  background: -o-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+  background: -ms-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+  background: linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#cccccc')";
+}
+
+img.cqm {
+  width: 1050px;
+  background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
+  background: -webkit-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+  background: -o-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+  background: -ms-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+  background: linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#cccccc')";
+}
+
+div.cqm-spacer {
+  height: 116px;
+  display: block;
+}
