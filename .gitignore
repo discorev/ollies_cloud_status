@@ -1,5 +1,6 @@
 .DS_Store
 .idea
+.editorconfig
 node_modules
 jspm_packages
 npm-debug.log
