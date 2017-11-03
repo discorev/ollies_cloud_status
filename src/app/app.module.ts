@@ -20,6 +20,10 @@ import { CqmService }           from './cqm.service';
                  component: DataCenterComponent
             },
             {
+                path: 'data-center',
+                component: DataCenterComponent
+            },
+            {
                 path: 'data-center/:name',
                 component: DataCenterComponent
             }

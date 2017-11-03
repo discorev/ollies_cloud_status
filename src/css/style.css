@@ -12,6 +12,13 @@ h1 {
   font-weight: 600;
 }
 
+div.logo img {
+  position: absolute;
+  top: 15px;
+  right: 15%;
+  width: 300px;
+}
+
 div.cqm img {
   height: 116px;
   padding: 5px;
