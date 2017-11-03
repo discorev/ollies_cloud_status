@@ -34,7 +34,6 @@ export class DataCenterComponent implements OnInit {
             .map(params => params.get('name') || '')
             .switchMap(name => {
                 this.dataCenter = name;
-                console.log(this.dataCenter);
                 return this.getCircuits(this.dataCenter);
             })
             .subscribe(cqmCircuits => this.cqmCircuits = cqmCircuits);
