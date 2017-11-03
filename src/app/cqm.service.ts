@@ -13,22 +13,31 @@ import { Graph } from './graph';
 @Injectable()
 
 export class CqmService {
-    private cqmListUrl = 'https://ollies.cloud/status/cqm/';
+    private cqmUrl = 'https://status.ollies.cloud/cqm/';
 
     constructor(private http: Http) {
     }
 
+    getCircuitsFor(datacentre: string): Promise<String[]> {
+        return this.getAll()
+            .then(list =>
+                // Filter the list of circuits for those ending with this datacentre identifier
+                list.filter(circuit => circuit.includes(datacentre))
+            )
+            .catch(this.handleError);
+    }
 
-    getList(): Promise<String[]> {
-        return this.http.get(this.cqmListUrl)
+
+    private getAll(): Promise<String[]> {
+        return this.http.get(this.cqmUrl)
             .toPromise()
             .then(response => response.json() as String[])
             .catch(this.handleError);
     }
 
     getGraph(circuit: string): Promise<Graph> {
-        const url = `${this.cqmListUrl}/${circuit}.png`;
-        const data = `${this.cqmListUrl}/${circuit}.json`;
+        const url = `${this.cqmUrl}/${circuit}.png`;
+        const data = `${this.cqmUrl}/${circuit}.json`;
 
         return this.http.get(data)
             .toPromise()

@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   cqmCircuits: String[];
 
   constructor(
-      private cqmService: CqmService,
+      private cqmService: CqmService
   ) { }
 
   toggleHeading() {
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   }
 
   getCircuits(): void {
-    this.cqmService.getList().then(circuits => this.cqmCircuits = circuits);
+    this.cqmService.getCircuitsFor('').then(circuits => this.cqmCircuits = circuits);
   }
 
   ngOnInit(): void {
